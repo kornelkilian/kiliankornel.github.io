@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>danimester23 – DevOps, PS5-professzor, kaszinórabló</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Rubik:wght@400;500;700&display=swap">
+<style>
+:root{--bg:#eef1f8;--card:#fff;--ink:#0b1236;--mute:#4a5580;--blue:#0070d1;--gold:#b8860b;--green:#0a8f5c;--red:#d12f4a;--line:#cdd5ea;--term:#0a1030;--termink:#b8f5d6;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#070c24;--card:#0e1638;--ink:#eef1ff;--mute:#9aa6d6;--blue:#3d9bff;--gold:#f2c14e;--green:#3ddc97;--red:#ff5c77;--line:#222c5c;--term:#04081a}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#070c24;--card:#0e1638;--ink:#eef1ff;--mute:#9aa6d6;--blue:#3d9bff;--gold:#f2c14e;--green:#3ddc97;--red:#ff5c77;--line:#222c5c;--term:#04081a}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.05rem/1.6 Rubik,system-ui,sans-serif}
+.wrap{max-width:980px;margin:0 auto;padding:0 20px}
+header.hero{background:#070c24;color:#eef1ff;padding:64px 0 56px;border-bottom:6px solid #f2c14e}
+.hero h1{font:400 clamp(2.2rem,9vw,5rem)/1 Bungee,Impact,sans-serif;margin:0 0 14px;letter-spacing:.01em;color:#fff}
+.hero h1 small{color:#f2c14e;font-size:.55em}
+.hero p{max-width:60ch;color:#b9c3ee;font-size:1.15rem;margin:0 0 22px}
+.badges{display:flex;flex-wrap:wrap;gap:10px}
+.badge{border:2px solid #3d9bff;color:#cfe4ff;padding:6px 14px;border-radius:999px;font-weight:500;font-size:.95rem}
+.badge.g{border-color:#f2c14e;color:#f2c14e}.badge.k{border-color:#3ddc97;color:#3ddc97}
+h2{font:400 clamp(1.5rem,5vw,2.3rem)/1.1 Bungee,Impact,sans-serif;margin:56px 0 8px}
+.lead{color:var(--mute);max-width:62ch;margin:0 0 24px}
+.stages{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.stage{flex:1 1 130px;background:var(--card);border:2px solid var(--line);border-radius:10px;padding:12px;text-align:left;font:inherit;color:var(--ink);cursor:pointer}
+.stage b{display:block;font-weight:700}
+.stage span{font-size:.85rem;color:var(--mute)}
+.stage.run{border-color:var(--blue)}.stage.ok{border-color:var(--green)}.stage.fail{border-color:var(--red)}
+.stage:focus-visible,.btn:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+.btn{background:var(--blue);color:#fff;border:0;border-radius:10px;padding:12px 22px;font:700 1rem Rubik,sans-serif;cursor:pointer}
+.btn.alt{background:transparent;color:var(--ink);border:2px solid var(--line)}
+pre.log{background:var(--term);color:var(--termink);font:400 .92rem/1.55 ui-monospace,Menlo,Consolas,monospace;padding:16px;border-radius:10px;min-height:190px;overflow-x:auto;margin:14px 0 0;white-space:pre-wrap}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.card{background:var(--card);border:2px solid var(--line);border-radius:14px;padding:20px}
+.card h3{margin:0 0 6px;font-size:1.15rem}
+.card p{margin:0;color:var(--mute)}
+.card.blue{border-top:6px solid var(--blue)}.card.gold{border-top:6px solid var(--gold)}.card.green{border-top:6px solid var(--green)}
+table{width:100%;border-collapse:collapse;background:var(--card);border-radius:12px;overflow:hidden}
+th,td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--line)}
+th{color:var(--mute);font-weight:500}
+.tw{overflow-x:auto;border:2px solid var(--line);border-radius:12px}
+.quote{border-left:6px solid var(--gold);padding:6px 0 6px 18px;margin:12px 0;font-size:1.1rem}
+.quote cite{display:block;color:var(--mute);font-size:.9rem;margin-top:4px}
+footer{margin:64px 0 0;padding:28px 0;border-top:2px solid var(--line);color:var(--mute);text-align:center;font-size:.95rem}
+@media(prefers-reduced-motion:no-preference){.hero h1{animation:pop .6s ease-out}}
+@keyframes pop{from{transform:scale(.94);opacity:0}to{transform:none;opacity:1}}
+</style>
+</head>
+<body>
+<header class="hero">
+<div class="wrap">
+<h1>danimester<small>23</small></h1>
+<p>Reggel Kubernetes-klasztert gyógyít, délután platinát gyűjt, este pedig tökéletes tisztasággal kirabolja a Diamond Casinót. Aki egyszer látta dolgozni, többet nem kérdez.</p>
+<div class="badges"><span class="badge">DevOps mester</span><span class="badge g">GTA Casino Heist szaki</span><span class="badge k">PS5 professzor</span></div>
+</div>
+</header>
+
+<main class="wrap">
+
+<h2>A Casino Heist mint CI/CD pipeline</h2>
+<p class="lead">Dani szerint egy jó rablás pont olyan, mint egy jó deploy: tervezés, tesztelés, és senki nem pánikol péntek délután. Kattints egy szakaszra, vagy indítsd el az egészet.</p>
+<div class="stages" id="stages"></div>
+<button class="btn" id="runAll">Teljes pipeline indítása</button>
+<button class="btn alt" id="reset">Visszaállítás</button>
+<pre class="log" id="log" aria-live="polite">$ várakozás a következő rablásra…</pre>
+
+<h2>Mit tud Dani?</h2>
+<div class="grid">
+<div class="card blue"><h3>DevOps</h3><p>Docker, Kubernetes, Terraform, pipeline-ok. Ha valami leáll, ő már régen látta a Grafanában. Ha nem áll le, azt is látta.</p></div>
+<div class="card green"><h3>PS5-professzor</h3><p>Minden beállítást ismer a SSD-bővítéstől a haptikus visszajelzésig. Ha elakadsz egy játékban, nem guglizol, hanem őt hívod.</p></div>
+<div class="card gold"><h3>Casino Heist</h3><p>Csendes, ravasz vagy agresszív? Dani mindháromnál tudja, ki hova áll, és ki viszi a pénzt a kijárathoz.</p></div>
+</div>
+
+<h2>Hivatalos mérések</h2>
+<div class="tw"><table>
+<tr><th>Mutató</th><th>Dani</th><th>Átlagember</th></tr>
+<tr><td>Rablás sikerességi aránya</td><td>99,9%</td><td>kb. 40%, és az is szerencse</td></tr>
+<tr><td>Uptime</td><td>99,99%</td><td>alszik</td></tr>
+<tr><td>Platina trófeák</td><td>„nem számolom”</td><td>3, abból 1 a Astro’s Playroom</td></tr>
+<tr><td>Kávé / nap</td><td>nem null</td><td>1 és bánja</td></tr>
+</table></div>
+
+<h2>Mondták róla</h2>
+<div class="quote">„Átírtam a konfigot, és működik. Ne kérdezd, miért.”<cite>danimester23, egy átlagos kedden</cite></div>
+<div class="quote">„Nálam megy.”<cite>danimester23, mielőtt megnyitotta a logokat</cite></div>
+<div class="quote">„A Gruppe Sechs bejáratnál mindig te vezetsz.”<cite>a csapat, egyhangúlag</cite></div>
+
+<footer>Készült szeretettel egy haver tiszteletére. Dani, ha ezt olvasod, te vagy a következő kör a barátainknak.</footer>
+</main>
+
+<script>
+(function(){
+var S=[
+{n:"Felderítés",d:"terv",l:["Kamerák feltérképezve","Biztonsági őr útvonala: rögzítve","Kaszinó alaprajz: letöltve"]},
+{n:"Előkészület",d:"build",l:["Fúró beszerezve","Álruha: Gruppe Sechs, méret ok","Menekülő autó: kész, tankolva"]},
+{n:"Behatolás",d:"teszt",l:["Csendes mód: aktiválva","Riasztás: nincs","Unit tesztek: 12/12 zöld"]},
+{n:"Széf",d:"deploy",l:["Széf felnyitva","Zsákmány: 3,5 millió","Zero downtime deploy sikerült"]},
+{n:"Menekülés",d:"rollback",l:["Rendőrség lemaradt","Rejtekhely elérve","Rollback nem kellett"]}
+];
+var st=document.getElementById("stages"),log=document.getElementById("log"),busy=false,btns=[];
+S.forEach(function(s,i){var b=document.createElement("button");b.className="stage";b.innerHTML="<b>"+s.n+"</b><span>"+s.d+"</span>";b.onclick=function(){if(!busy)run([i])};st.appendChild(b);btns.push(b)});
+function sleep(ms){return new Promise(function(r){setTimeout(r,ms)})}
+async function run(list){
+busy=true;log.textContent="$ pipeline indul…\n";
+for(var k=0;k<list.length;k++){var i=list[k],b=btns[i];b.className="stage run";log.textContent+="\n[ "+S[i].n+" ]\n";
+for(var j=0;j<S[i].l.length;j++){await sleep(550);log.textContent+="  ✔ "+S[i].l[j]+"\n";}
+b.className="stage ok";await sleep(300);}
+if(list.length>1){log.textContent+="\nPipeline zöld. Dani vigyorog, a csapat fizet egy kört.";}
+busy=false;
+}
+document.getElementById("runAll").onclick=function(){if(busy)return;btns.forEach(function(b){b.className="stage"});run([0,1,2,3,4])};
+document.getElementById("reset").onclick=function(){if(busy)return;btns.forEach(function(b){b.className="stage"});log.textContent="$ várakozás a következő rablásra…"};
+})();
+</script>
+</body>
+</html>
